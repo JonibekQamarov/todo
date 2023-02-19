@@ -13,7 +13,7 @@ const todos = getTodos();
 
 renderTodo();
 elTodoItems.addEventListener("click", (e) => {
-  if (e.target.matches("[data-delete]")) return;
+  if (!e.target.matches("[data-delete]")) return;
   let elTBtn = e.target.dataset.id;
   deleteTodo(elTBtn);
 });
@@ -50,8 +50,8 @@ function addTodo(todo) {
 
 function toggleTodo(id) {
   for (let i = 0; i < todos.length; i++) {
-    if (+id === todo[i].id) {
-      todo[i].isDone = !todos[i].isDone;
+    if (+id === todos[i].id) {
+      todos[i].isDone = !todos[i].isDone;
       break;
     }
   }
