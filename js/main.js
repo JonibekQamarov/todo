@@ -96,5 +96,5 @@ function getTodos() {
 
 function setTodos() {
   const stringTodos = JSON.stringify(todos);
-  localStorage.getItem("todos", stringTodos);
+  localStorage.setItem("todos", stringTodos);
 }
