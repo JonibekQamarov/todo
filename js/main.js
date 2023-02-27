@@ -83,6 +83,14 @@ function renderTodo() {
       el.dataset.id = todo.id;
     });
 
+    // const date = new Date();
+
+    // if (
+    //   createdAt.setDate(date.getDate()) < dueDate.setDate(date.getDate() + 2)
+    // ) {
+    //   elTodoItem.querySelector("[data-due-date]").classList.add("bg-success");
+    // }
+
     todoItemsEls.push(elTodoItem);
   });
   elTodoItems.append(...todoItemsEls);
